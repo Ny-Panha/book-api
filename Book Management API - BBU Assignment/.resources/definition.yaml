@@ -1,4 +1,0 @@
-$kind: collection
-description: Collection for testing tblAuthor, tblBookType, tblBook, tblBookAuthor CRUD APIs
-variables:
-  base_url: http://127.0.0.1:8000
