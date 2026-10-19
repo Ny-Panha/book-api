@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{base_url}}/api/book-authors/1?AuthorID=1"
+method: DELETE
+queryParams:
+  AuthorID: "1"
+order: 5000

@@ -29,7 +29,7 @@ class BookTypeController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'BookTypeName' => 'required|string|max:255|unique:tblBookType,BookTypeName',
+            'BookTypeName' => 'required|string|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -87,7 +87,7 @@ class BookTypeController extends Controller
         }
 
         $validator = Validator::make($request->all(), [
-            'BookTypeName' => 'required|string|max:255|unique:tblBookType,BookTypeName,' . $id . ',BookTypeID',
+            'BookTypeName' => 'sometimes|required|string|max:255',
         ]);
 
         if ($validator->fails()) {

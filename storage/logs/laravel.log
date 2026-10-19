@@ -1,0 +1,14 @@
+[2026-10-19 07:50:16] local.ERROR: The /mnt/c/Users/FTC/Desktop/book-api/bootstrap/cache directory must be present and writable. {"exception":"[object] (Exception(code: 0): The /mnt/c/Users/FTC/Desktop/book-api/bootstrap/cache directory must be present and writable. at /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php:179)
+[stacktrace]
+#0 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(132): Illuminate\\Foundation\\PackageManifest->write()
+#1 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(108): Illuminate\\Foundation\\PackageManifest->build()
+#2 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(91): Illuminate\\Foundation\\PackageManifest->getManifest()
+#3 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->config()
+#4 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#5 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap()
+#6 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith()
+#7 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#8 /mnt/c/Users/FTC/Desktop/book-api/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle()
+#9 /mnt/c/Users/FTC/Desktop/book-api/artisan(17): Illuminate\\Foundation\\Application->handleCommand()
+#10 {main}
+"} 

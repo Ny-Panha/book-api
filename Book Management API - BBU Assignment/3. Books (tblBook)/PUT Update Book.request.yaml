@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/api/books/1"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: text
+  content: |-
+    {
+        "NumOfCopies": 95,
+        "Remark": "Updated stock copies"
+    }
+order: 4000
