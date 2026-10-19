@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "bbu-book-api-collection-2026",
+		"name": "Book Management API - BBU Assignment",
+		"description": "Collection for testing tblAuthor, tblBookType, tblBook, tblBookAuthor CRUD APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Book Types (tblBookType)",
+			"item": [
+				{
+					"name": "GET All Book Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/book-types",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-types"]
+						}
+					}
+				},
+				{
+					"name": "POST Create Book Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookTypeName\": \"Technology & AI\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/book-types",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-types"]
+						}
+					}
+				},
+				{
+					"name": "GET Single Book Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/book-types/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-types", "1"]
+						}
+					}
+				},
+				{
+					"name": "PUT Update Book Type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookTypeName\": \"Computer Science & AI\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/book-types/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-types", "1"]
+						}
+					}
+				},
+				{
+					"name": "DELETE Book Type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/book-types/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-types", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "2. Authors (tblAuthor)",
+			"item": [
+				{
+					"name": "GET All Authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/authors",
+							"host": ["{{base_url}}"],
+							"path": ["api", "authors"]
+						}
+					}
+				},
+				{
+					"name": "POST Create Author",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AuthorName\": \"Ny Panha\",\n    \"Gender\": \"Male\",\n    \"DOB\": \"2003-03-25\",\n    \"POB\": \"Battambang\",\n    \"Address\": \"Battambang City\",\n    \"Phone\": \"012345678\",\n    \"Email\": \"nha@example.com\",\n    \"Photo\": \"nha.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/authors",
+							"host": ["{{base_url}}"],
+							"path": ["api", "authors"]
+						}
+					}
+				},
+				{
+					"name": "GET Single Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/authors/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "authors", "1"]
+						}
+					}
+				},
+				{
+					"name": "PUT Update Author",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Phone\": \"098765432\",\n    \"Address\": \"Phnom Penh\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/authors/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "authors", "1"]
+						}
+					}
+				},
+				{
+					"name": "DELETE Author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/authors/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "authors", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "3. Books (tblBook)",
+			"item": [
+				{
+					"name": "GET All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/books",
+							"host": ["{{base_url}}"],
+							"path": ["api", "books"]
+						}
+					}
+				},
+				{
+					"name": "POST Create Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookTitle\": \"Laravel 11 Full Course\",\n    \"BookTypeID\": 1,\n    \"PublishDate\": \"2025-01-15\",\n    \"NumOfPages\": 420,\n    \"NumOfCopies\": 80,\n    \"Edition\": \"1st Edition\",\n    \"Publisher\": \"BBU Press\",\n    \"BookSource\": \"Purchased\",\n    \"Remark\": \"Best guide for students\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/books",
+							"host": ["{{base_url}}"],
+							"path": ["api", "books"]
+						}
+					}
+				},
+				{
+					"name": "GET Single Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/books/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "books", "1"]
+						}
+					}
+				},
+				{
+					"name": "PUT Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"NumOfCopies\": 95,\n    \"Remark\": \"Updated stock copies\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/books/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "books", "1"]
+						}
+					}
+				},
+				{
+					"name": "DELETE Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/books/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "books", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "4. Book Authors (tblBookAuthor)",
+			"item": [
+				{
+					"name": "GET All Book Authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/book-authors",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-authors"]
+						}
+					}
+				},
+				{
+					"name": "POST Assign Author to Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookID\": 1,\n    \"AuthorID\": 1,\n    \"AuthorDate\": \"2025-01-20\",\n    \"Remark\": \"Main Author\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/book-authors",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-authors"]
+						}
+					}
+				},
+				{
+					"name": "GET Authors by BookID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/book-authors/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-authors", "1"]
+						}
+					}
+				},
+				{
+					"name": "PUT Update Book Author Relation",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Accept", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AuthorID\": 1,\n    \"Remark\": \"Lead Co-Author\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/book-authors/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-authors", "1"]
+						}
+					}
+				},
+				{
+					"name": "DELETE Book Author Relation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/book-authors/1?AuthorID=1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "book-authors", "1"],
+							"query": [
+								{"key": "AuthorID", "value": "1"}
+							]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}
